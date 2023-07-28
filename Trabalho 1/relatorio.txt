@@ -1,0 +1,17 @@
+Aluno 1: Jayme Augusto Avelino de Paiva; Matrícula: 2210289;
+Aluno 2: João Gabriel Peixoto Drumond Lopes; Matrícula: 2210168;
+
+Relatório do módulo bigint.c:
+	O módulo bigint.c está com todas as operações previstas pelo bigint.h funcionando, atribuindo valores, realizando somas, subtrações, multiplicações, shifts, complemento a 2, além disso ele também está com a operação de cópia de um valor bigint para outro, função usada de forma auxiliar para outras. Além disso, é válido ressaltar que todas as operações foram feitas de forma que o conteúdo dos BigInts recebidos como parâmetros não são alterados e de forma que é possível realizar uma operação de um número com ele mesmo e guardar o valor no próprio também. Por fim, e ntrando no tópico do que esse módulo não faz, ele não realiza divisões, não trabalha com floats, não printa o valor do BigInt e não aceita a atribuição de mais de um long ao mesmo tempo.
+	
+Relatório de testes:
+
+A estratégia geral de testagem envolveu, em princípio, testes nos extremos. Embora tenham sido realizados testes em valores intermediários, testes que trabalham diretamente com as limitações do programa foram realizados com prioridade.
+Inicialmente, na testagem de valores, foram utilizadas as constantes LONG_MIN e LONG_MAX, valores mínimo e máximo, respectivamente. 
+Nas funções seguintes, utilizou-se BIGINT_MAX e BIGINT_MIN, definidos como os valores máximo e mínimo armazenados por um inteiro com sinal de 16 bytes. Na multiplicação, foram utilizados exemplos que causam ou overflow ou underflow. 
+Nos shifts, left, right (lógico e aritmético), os valores testados foram 3, para cada BigInt de teste. 127 e 0, periféricos, e um valor arbitrário qualquer. 
+O arquivo ficou organizado da seguinte forma:
+Funções genéricas de comparação
+Funções específicas de testagem de cada função de bigint.h
+main, com separação tanto com comentários quanto com printfs entre os diferentes blocos de testagem
+As funções de teste funcionam com base na comparação entre o valor gerado pela função testada e o valor esperado de retorno.

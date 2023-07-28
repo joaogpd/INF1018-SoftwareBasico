@@ -1,0 +1,60 @@
+João Gabriel Peixoto Drumond Lopes 2210168 3WB
+Jayme Augusto Avelino de Paiva 2210289 3WB
+
+A tradução de todos os comandos da linguagem Simples encontra-se funcional, de acordo com os casos
+de teste que foram elaborados. Foram testadas a maior quantidade possível de combinações que podem
+ser comandos, buscando abordar todos os casos possíveis.
+
+Os casos de teste criados foram:
+- atribuições de: constante, variável e parâmetro
+- operações de: soma, diferença e multiplicação, de var op var, c op c, var op c, c op var
+- jumps para linhas antes e depois, com variáveis de valor maior que 0, menor que 0 e igual a 0
+- retorno de constantes e de variáveis locais
+
+Algumas das funções testadas foram as funções presentes no texto do trabalho
+fatorial.sp
+v1 < p1      
+v2 < $1      
+v3 < $0      
+iflez v1 8   
+v2 = v2 * v1 
+v1 = v1 - $1 
+iflez v3 4
+ret v2       
+
+funcxy1.sp
+v1 < p1      
+v2 < p2     
+v3 = v1 + v2 
+v4 = v1 - v2 
+v1 = v3 * v4
+ret v1  
+
+Outras funções:
+Retorno de variável:
+caso2.sp
+v1 < $20
+ret v1
+
+Multiplicação de variáveis:
+caso18.sp
+v1 < $4
+v2 < $-6
+v3 = v1 * v2
+ret v3
+
+Atribuições de parâmetros 1 a 3
+caso4.sp, caso5.sp, caso6.sp
+v1 < [p1|p2|p3]
+ret v1
+
+Diferença de variável local e constante:
+caso13.sp
+v2 < $6
+v1 = v2 - $4
+ret v1
+
+Os testes foram realizados usando uma função de teste na testegera.c, que recebe
+nome do arquivo a ser testado e parâmetros. Os testes foram automatizados, e mensagens
+de sucesso e falha (SUCCESS e FAILURE) são exibidas, em conjunto com retorno
+esperado e recebido
